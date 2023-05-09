@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang=fr>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Projet d'infrastructure de serveurs</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="reseaux">
+        <img src="assets/instagram.svg" alt="">
+        <img src="assets/linkedin.svg" alt="">
+        <img src="assets/pinterest.svg" alt="">
+    </div>
+    <header class="nav">
+        <a href="#" class="logo">
+            YNOV <br> Informatique
+        </a>
+        <div class="links">
+            <ul>
+                <li><a href="#doc-1">introduction</a></li>
+                <li><a href="#doc-2">infrastructure</a></li>
+                <li><a href="#doc-3">documentation</a></li>
+                <li><a href="#doc-4">conclusion</a></li>
+            </ul>
+        </div>
+        <img class="hamburger" src="assets/menu.svg" alt="">
+    </header>
+    <div class="index">
+        <div class="i-text">
+            <h1>ARCHITECTURE CLIENT-SERVEUR</h1>
+            <h2>UF : Infrastructures et systèmes d'information</h2>
+        </div>
+    </div>
+    <section class="fond">
+    
+        <div id="doc-1" class="intro">
+            <span class="txt section-box">
+                <h2>Contexte de l'introduction : </h2>
+                <p>Dans le cadre d'un exercice scolaire, vous avez été chargé de simuler un réseau d'entreprise en utilisant VirtualBox. Cette entreprise fictive, appelons-la "TechSolutions", est une petite entreprise spécialisée dans les services informatiques. Afin de répondre aux besoins spécifiques de TechSolutions, vous avez décidé de mettre en place une infrastructure réseau comprenant deux serveurs Debian, un routeur pfSense et deux clients (un sous Ubuntu et un autre sous Windows).
+                </p>
+            </span>
+    
+            <span class="txt section-box">
+                <h2>Partie 1 - Choix des serveurs et leurs rôles :</h2>
+                <p>Pour assurer la présence en ligne de TechSolutions, vous avez créé une machine virtuelle (VM) sous Debian, qui fonctionne en tant que serveur web. Ce serveur web héberge le site internet de l'entreprise et permet aux clients de consulter les services offerts, ainsi que de prendre contact avec l'équipe.</p>
+    
+                <p>Afin de garantir la disponibilité et la fiabilité des données du serveur web, vous avez également créé une seconde VM sous Debian, qui sert de serveur de sauvegarde. Ce serveur de sauvegarde réalise des copies de sauvegarde du serveur web toutes les 24 heures, assurant ainsi la protection des données en cas de panne ou d'incident.</p>
+
+                <h2>Partie 2 - Routeur pfSense et sécurité du réseau :</h2>
+                <p>Pour assurer la sécurité et la gestion du trafic réseau au sein de l'entreprise, vous avez décidé d'utiliser pfSense, un système d'exploitation spécialisé dans la gestion des routeurs et des pare-feu. En installant pfSense sur une VM, vous avez créé un routeur virtuel qui est en mesure de filtrer le trafic entrant et sortant, ainsi que d'appliquer des règles de sécurité pour protéger le réseau de TechSolutions contre les menaces potentielles.</p>
+
+                <p> Le routeur pfSense offre également d'autres fonctionnalités, telles que la gestion de la qualité de service (QoS) pour prioriser certains types de trafic, et la mise en place de réseaux privés virtuels (VPN) pour permettre aux employés de se connecter en toute sécurité depuis des sites distants.</p>
+
+                <h2>Partie 3 - Clients Ubuntu et Windows :</h2>
+                <p>Pour représenter la diversité des systèmes d'exploitation utilisés au sein de l'entreprise, vous avez également mis en place deux VM clients : une sous Ubuntu et une autre sous Windows. Ces deux clients permettent de simuler le fonctionnement des postes de travail des employés de TechSolutions.</p>
+
+                <p>En intégrant ces deux systèmes d'exploitation, vous avez pris en compte la possibilité que certains employés utilisent des logiciels spécifiques à l'un ou l'autre des systèmes, ou qu'ils aient des préférences personnelles en matière de système d'exploitation. Les clients Ubuntu et Windows permettent également de tester l'interopérabilité et la compatibilité des ressources partagées sur le réseau, garantissant ainsi une expérience utilisateur optimale pour tous les employés.</p>
+            </span>
+        </div>
+    
+        <div id="doc-2" class="choix">
+            <span  class="txt section-box">
+                <h2>Partie 4 - Autres alternatives possibles :</h2>
+                <p>Bien que vous ayez choisi d'utiliser Debian pour les serveurs, pfSense pour le routeur et Ubuntu et Windows pour les clients, il est important de mentionner d'autres alternatives que vous auriez pu utiliser pour mettre en place ce réseau d'entreprise. Voici quelques-unes de ces alternatives :</p>
+                <h2>Serveurs alternatifs :</h2>
+                <ul>
+                    <li>CentOS : une distribution Linux basée sur les sources de Red Hat Enterprise Linux (RHEL), qui offre un bon équilibre entre stabilité et fonctionnalités.</li>
+                    <li>Ubuntu Server : une version de la distribution Ubuntu spécialement conçue pour les serveurs, offrant une vaste gamme d'applications et de services.</li>
+                    <li>Solutions de virtualisation alternatives : <br>VMware : un logiciel de virtualisation populaire qui propose des fonctionnalités avancées et une large compatibilité avec différents systèmes d'exploitation.</li>
+                    <li>Microsoft Hyper-V : une solution de virtualisation développée par Microsoft, qui fonctionne bien avec les environnements Windows et offre des fonctionnalités d'intégration avec d'autres produits Microsoft.</li>
+                    <li>Pare-feu et routeurs alternatifs : <br>OPNsense : un projet dérivé de pfSense qui se concentre sur la sécurité et la facilité d'utilisation, tout en offrant des fonctionnalités similaires.</li>
+                    <li>Cisco IOS : un système d'exploitation développé par Cisco Systems pour ses routeurs et commutateurs, qui propose une vaste gamme de fonctionnalités et une grande flexibilité pour la gestion des réseaux.</li>
+                    <li>Systèmes d'exploitation clients alternatifs : <br>macOS : le système d'exploitation d'Apple, qui est populaire pour son design élégant et son écosystème d'applications professionnelles.</li>
+                    <li>Fedora : une distribution Linux axée sur l'innovation et les dernières technologies, qui pourrait être utilisée par les employés recherchant un environnement de travail plus moderne et avant-gardiste.</li>
+                </ul>
+            </span>
+        </div>
+        
+        <div class="shema">
+            <span class="section-box">
+                <img src="assets/serveur.svg" alt="Serveur Web">
+                <p>Serveur-web</p>
+            </span>
+            <span class="section-box">
+                <img src="assets/serveur.svg" alt="Serveur Backup">
+                <p>Serveur-backup</p>
+            </span>
+            <span class="section-box">
+                <img src="assets/bouclier.svg" alt="Pare-feu">
+                <p>Pare-feu</p>
+            </span>
+            <span class="section-box">
+                <img src="assets/linux.svg" alt="Poste Linux">
+                <p>Post linux</p>
+            </span>
+            <span class="section-box">
+                <img src="assets/windows.svg" alt="Poste Windows">
+                <p>Post windows</p>
+            </span>
+        </div>
+
+        <div id="doc-3" class="doc">
+            <span  class="txt section-box">
+                <h2>Installation</h2>
+                <ul>
+                    <li>Téléchargez et installez VirtualBox à partir du site officiel : https://www.virtualbox.org/wiki/Downloads</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 2 : Création des machines virtuelles</h2>
+                <ul>
+                    <li>Ouvrez VirtualBox et cliquez sur "Nouvelle" pour créer une nouvelle machine virtuelle.</li>
+                    <li>Répétez cette étape pour créer les VMs suivantes avec les noms et systèmes d'exploitation correspondants :
+                        Routeur pfSense (FreeBSD)
+                        Serveur Web (Debian)
+                        Serveur de Sauvegarde (Debian)
+                        Client Ubuntu (Ubuntu)
+                        Client Windows (Windows)</li>
+                    <li>Sélectionnez "Custom (advanced)" et suivez les étapes de l'assistant. Utilisez l'image ISO de Debian
+                        11.5 que vous avez téléchargée comme disque d'installation.</li>
+                    <li>Configurez la machine virtuelle avec des ressources suffisantes (CPU, RAM, stockage) pour répondre
+                        aux besoins de l'entreprise. La configuration minimale recommandée pour un serveur web simple est 1
+                        CPU, 2 Go de RAM et 20 Go de stockage.</li>
+                    <li> Lancez la machine virtuelle et installez Debian en suivant les instructions de l'assistant
+                        d'installation. Vous pouvez choisir d'installer uniquement les logiciels nécessaires pour un serveur
+                        web.</li>
+                </ul>
+            </span>
+            <span  class="txt section-box">
+                <h2>Étape 3 : Configuration du réseau</h2>
+                <ul>
+                    <li>Pour chaque machine virtuelle, accédez aux paramètres de la VM et cliquez sur l'onglet "Réseau".</li>
+                    <li>Configurez les cartes réseau pour utiliser le mode "Réseau interne" ou "NAT".</li>
+                    <li>Assurez-vous que toutes les machines virtuelles sont connectées au même réseau interne ou au même réseau NAT.</li>
+
+                </ul>
+            </span>
+            <span  class="txt section-box">
+                <h2>Étape 4 : Installation et configuration du routeur pfSense</h2>
+                <ul>
+                    <li>Téléchargez l'image ISO de pfSense à partir du site officiel : https://www.pfsense.org/download/</li>
+                    <li>Montez l'image ISO dans la VM du routeur pfSense et démarrez la VM pour lancer l'installation.</li>
+                    <li>Suivez les instructions à l'écran pour installer et configurer pfSense, en utilisant l'adresse IP 192.168.1.1 pour l'interface LAN.</li>
+                    <li>Une fois pfSense installé et configuré, accédez à l'interface Web pour configurer le pare-feu, les règles de routage et d'autres paramètres.</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 5 : Installation et configuration des serveurs Debian</h2>
+                <ul>
+                    <li>Téléchargez l'image ISO de Debian à partir du site officiel : https://www.debian.org/distrib/</li>
+                    <li>Montez l'image ISO dans les VMs des serveurs Web et de sauvegarde et démarrez les VMs pour lancer l'installation.</li>
+                    <li>Suivez les instructions à l'écran pour installer Debian sur les serveurs Web et de sauvegarde..</li>
+                    <li>Une fois Debian installé, attribuez-leur les adresses IP statiques correspondantes (192.168.1.2 pour le serveur Web et 192.168.1.3 pour le serveur de sauvegarde).</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 6 : Installation et configuration des clients Ubuntu et Windows</h2>
+                <ul>
+                    <li>Téléchargez les images ISO d'Ubuntu et de Windows à partir de leurs sites officiels respectifs.</li>
+                    <li>Montez les images ISO dans les VMs des clients Ubuntu et Windows et démarrez les VMs pour lancer l'installation.</li>
+                    <li>Suivez les instructions à l'écran pour installer Ubuntu et Windows sur les clients.</li>
+                    <li>Une fois les systèmes d'exploitation installés, attribuez-leur les adresses IP statiques correspondantes (192.168.1.4 pour le client Ubuntu et 192.168.1.5 pour le client Windows).</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 7 : Configuration du serveur Web</h2>
+                <ul>
+                    <li>Installez un serveur Web (par exemple, Apache ou Nginx) sur la VM du serveur Web.</li>
+                    <li>Configurez le serveur Web pour héberger le site Web de l'entreprise.</li>
+                    <li>Testez le serveur Web en accédant à son adresse IP (192.168.1.2) depuis l'un des clients</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 8 : Configuration du serveur de sauvegarde</h2>
+                <ul>
+                    <li>Installez les outils de sauvegarde nécessaires (par exemple, rsync) sur les VMs du serveur Web et du serveur de sauvegarde.</li>
+                    <li>Configurez la connexion SSH entre le serveur Web et le serveur de sauvegarde pour permettre des transferts de fichiers sécurisés.</li>
+                    <li>Créez un script de sauvegarde automatisée qui effectue des copies des données du serveur Web vers le serveur de sauvegarde toutes les 24 heures.</li>
+                    <li>Testez le script de sauvegarde en exécutant une sauvegarde manuelle et vérifiez que les données sont correctement copiées sur le serveur de sauvegarde.</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 9 : Test des clients et connectivité réseau</h2>
+                <ul>
+                    <li>Sur les clients Ubuntu et Windows, configurez les paramètres réseau avec les adresses IP statiques correspondantes (192.168.1.4 pour le client Ubuntu et 192.168.1.5 pour le client Windows) et utilisez 192.168.1.1 comme passerelle par défaut (routeur pfSense).</li>
+                    <li>Testez la connectivité réseau entre les clients et les serveurs en effectuant des pings entre les différentes machines.</li>
+                    <li>Testez l'accès au serveur Web depuis les clients en utilisant un navigateur Web pour accéder à l'adresse IP du serveur Web (192.168.1.2).</li>
+                </ul>
+            </span>
+            <span class="txt section-box">
+                <h2>Étape 10 : Validation et documentation</h2>
+                <ul>
+                    <li>Vérifiez que toutes les machines virtuelles fonctionnent comme prévu et que le réseau est correctement configuré et sécurisé.</li>
+                    <li>Documentez la configuration du réseau, les adresses IP utilisées, les étapes d'installation et de configuration, ainsi que les choix techniques effectués.</li>
+                </ul>
+            </span>
+        </div>
+    
+        <div id="doc-4" class="conclusion">
+            <span class="txt section-box">
+                <h2>En conclusion:</h2>
+                <p>En conclusion, vous avez réussi à simuler un réseau d'entreprise en utilisant VirtualBox, en mettant en place des serveurs Debian pour les rôles de serveur Web et de serveur de sauvegarde, un routeur pfSense pour assurer la sécurité et la gestion du trafic, et des clients Ubuntu et Windows pour représenter les postes de travail des employés.
+
+                    Grâce à cette infrastructure, vous avez pu répondre aux besoins de l'entreprise fictive "TechSolutions" en termes de disponibilité, de sécurité et de compatibilité entre les différents systèmes d'exploitation. En outre, vous avez exploré d'autres alternatives possibles pour chaque composant du réseau, montrant ainsi votre capacité à analyser et à comparer différentes solutions techniques.
+                    
+                    En suivant la documentation technique détaillée, étape par étape, vous avez également montré votre compétence dans la configuration et la gestion d'un réseau d'entreprise complexe. Ce projet vous a permis de renforcer votre compréhension des concepts réseaux et des technologies impliquées, ce qui sera sans aucun doute bénéfique pour vos futurs projets et votre carrière dans le domaine de l'informatique.
+                    
+                    Avec ce travail complet, vous êtes maintenant prêt à soumettre votre devoir à votre professeur, en démontrant votre expertise dans la création, la gestion et la documentation d'un réseau d'entreprise simulé.</p>
+            </span>
+        </div>
+    </section>
+    </body>
+<script src="js/main.js"></script>
+
+</html> 

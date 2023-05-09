@@ -1,0 +1,340 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a
+{
+	text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* Path: css\style.css */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+    color: #fefefe;
+}
+
+.bg-image 
+{
+    background-image: url(../assets/back.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.reseaux {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    top: 75%;
+    z-index: 100;
+}
+
+.reseaux img
+{
+    width: 30px;
+    margin: 10px;
+}
+
+.nav
+{
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+{
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    color: #fefefe;
+}
+
+.links
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.links ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: wrap;
+    gap: 10px; 
+}
+
+.links a
+{
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    color: #fefefe;
+}
+
+.links a:hover
+{
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(8px);
+}
+
+
+.hamburger
+{
+    display: none;
+    cursor: pointer;
+    width: 35px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 1025px)
+{
+
+    .hamburger
+    {
+        display: block;
+    }
+    .links
+    {
+        top : 0;
+        right: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        margin: 0 100%;
+    }
+    .links.mobile_menu 
+    {
+    margin: 0 0;
+    }
+    .links ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .links ul li
+    {
+        margin: 25px 0; 
+    }
+}
+
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.index h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.index h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/* la documentation */
+
+.fond {
+    height: 620vh;
+    width: 100%;
+    background-color: #262626;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.shema,
+.choix
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doc,
+.conclusion
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-box {
+    border: solid #9A8A78 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.intro span,
+.shema span,
+.choix span,
+.doc span,
+.conclusion span 
+{
+    width: 1000px;
+}
+
+.shema span {
+    height: 200px;
+    width: 200px;
+}
+
+.serv-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txt h2
+ {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.txt p
+ {
+    font-size: 2vh;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.txt ul
+    {
+        font-size: 2vh;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+.txt ul li
+    {
+        margin: 10px 0;
+    }
+
+.txt img
+{
+    width: 100%;
+    height: 100%;
+}
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .intro span,
+    .shema span,
+    .choix span {
+        height: auto;
+        width: 80%;
+    }
+
+    .shema {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro span,
+    .shema span {
+        width: 100%;
+    }
+
+    .serv-web .s-1,
+    .serv-web .s-2 {
+        width: 100%;
+    }
+}
